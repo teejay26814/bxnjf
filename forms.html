@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .form-control {
+margin-bottom: 1rem;
+        }
+        
+    </style>
+    <main>
+        <h1>form teaching</h1>
+        <form action="/submit" method="post">
+         <div class="form-control">
+         <label for="Name">Name:
+            <input type="text" name="" id="name" required="" autocomplete="">
+            
+            <p id="error"></p>
+        </label>
+    </div>
+    <div class="form-control">
+        <fieldset>
+            <legend>Who is your favorite student?</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" value="blendan" name="machine"> Do
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" value="hoover" name="machine">Others
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" value="toasty"  name="machine">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+    </div>
+    <div class="form-control">
+        <label for="male"></label>
+        <input type="checkbox" name="human" value="human" id="machine">human
+
+    </div>
+    
+    <div class="form-control">
+        <label for="male"></label>
+        <input type="checkbox" name="machine" value="machine" id="machine"> I agree to watch the LMS, read the class notes, do your assignments without a third party not limited to Ai, do not disturb the comment section when teaching and any othe duty as assigned by the instructor.
+    </div>
+    
+    <button type="submit">submit</button>
+        </form>
+    </main>
+    <aside>
+        <dialog></dialog>
+    </aside>
+</body>
+</html>
