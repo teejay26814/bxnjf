@@ -1,0 +1,30 @@
+/* Shared styles for Abraham, Thompsons & Co "Did you know?" motion videos (1080x1920). */
+@import url('fonts/fonts.css');
+:root{
+  --forest-700:#243b31;--forest-600:#31503f;
+  --mint-500:#4dab8c;--mint-400:#6bc0a3;--mint-300:#93d3bd;--mint-100:#e4f3ec;
+  --charcoal-900:#1f1f1f;--charcoal-500:#6b6b6b;--charcoal-300:#9c9c9c;
+  --offwhite-100:#f8f6f2;
+  --serif:'Libre Caslon Text',Georgia,serif;
+  --sans:'Work Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--offwhite-100)}
+.scene{position:absolute;inset:0;overflow:hidden}
+.light{background:var(--offwhite-100);color:var(--charcoal-900)}
+.dark{background:var(--forest-700);color:var(--offwhite-100)}
+.abs{position:absolute}
+.logo{position:absolute;left:96px;top:104px;width:300px}
+.rule{position:absolute;right:96px;bottom:132px;width:220px;height:2px;transform-origin:right center}
+.light .rule{background:rgba(31,31,31,.18)}
+.dark .rule{background:rgba(248,246,242,.28)}
+.content{position:absolute;left:96px;right:96px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.bd{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
+.eyebrow{font-family:var(--sans);font-weight:500;text-transform:uppercase;letter-spacing:.14em}
+.tag{display:inline-block;align-self:flex-start;border:2px solid var(--mint-400);color:var(--mint-300);border-radius:6px;padding:16px 26px;font-size:28px}
+.w{display:block;white-space:nowrap;will-change:transform,opacity,filter}
+.corner{position:absolute;width:560px;height:560px;border-radius:50%}
+.chev{width:64px;height:64px;border-top:12px solid var(--mint-500);border-right:12px solid var(--mint-500);transform:rotate(45deg)}
+.box{border:2px dashed var(--mint-500);border-radius:6px;padding:14px 34px;align-self:flex-start;font-size:60px;line-height:1.15;color:var(--offwhite-100)}
+.pill{position:relative;align-self:flex-start;border:2px solid rgba(31,31,31,.18);border-radius:6px;padding:14px 32px;font-size:58px;line-height:1.15}
