@@ -6,7 +6,7 @@
 <style>
 .row{display:flex;align-items:baseline;gap:30px;border-top:2px solid rgba(31,31,31,.14);padding:26px 0}
 .row .n{font-family:var(--sans);font-weight:600;font-size:34px;letter-spacing:.08em;color:var(--mint-500);min-width:64px}
-.row .t{font-family:var(--serif);font-style:italic;font-size:62px;line-height:1.15}
+.row .t{font-family:var(--serif);font-style:italic;font-size:54px;line-height:1.18}
 </style>
 </head>
 <body>
@@ -32,9 +32,9 @@
     <span class="w eyebrow" id="C0" style="font-size:30px;color:var(--mint-500);margin-bottom:24px">The formalities</span>
     <span class="w it" id="C1" style="font-size:76px;line-height:1.2;margin-bottom:50px">For a will to be valid:</span>
     <div class="w row" id="C2"><span class="n">01</span><span class="t">It is in writing</span></div>
-    <div class="w row" id="C3"><span class="n">02</span><span class="t">You sign it</span></div>
-    <div class="w row" id="C4"><span class="n">03</span><span class="t">Two witnesses watch you<br>sign, together</span></div>
-    <div class="w row" id="C5" style="border-bottom:2px solid rgba(31,31,31,.14)"><span class="n">04</span><span class="t">They sign in<br>your presence</span></div>
+    <div class="w row" id="C3"><span class="n">02</span><span class="t">You sign it, or someone signs<br>for you, in your presence and<br>at your direction</span></div>
+    <div class="w row" id="C4"><span class="n">03</span><span class="t">You sign or acknowledge it<br>before at least two witnesses,<br>present at the same time</span></div>
+    <div class="w row" id="C5" style="border-bottom:2px solid rgba(31,31,31,.14)"><span class="n">04</span><span class="t">The witnesses sign it<br>in your presence</span></div>
   </div>
   <div class="rule" id="C_rule"></div>
 </div>
@@ -64,8 +64,10 @@
     <span class="w bd" id="E2" style="font-size:98px;line-height:1.06">beneficiary</span>
     <span class="w bd" id="E3" style="font-size:98px;line-height:1.06;margin-bottom:44px">witness your will.</span>
     <span class="w it" id="E4" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78)">If they or their spouse do,</span>
-    <span class="w it" id="E5" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78)">the gift to them is void.</span>
-    <span class="w it" id="E6" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78);margin-bottom:56px">The rest of the will stands.</span>
+    <span class="w it" id="E5" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78)">the gift to them is void,</span>
+    <span class="w" id="E8" style="font-family:var(--sans);font-size:32px;line-height:1.4;color:rgba(248,246,242,.64);margin:6px 0 22px">unless two other witnesses also signed the will.</span>
+    <span class="w it" id="E6" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78)">Either way, the rest</span>
+    <span class="w it" id="E9" style="font-size:60px;line-height:1.3;color:rgba(248,246,242,.78);margin-bottom:56px">of the will stands.</span>
     <span class="w eyebrow tag" id="E7">Wills Law of Lagos State · S.8</span>
   </div>
   <div class="rule" id="E_rule"></div>
@@ -106,7 +108,7 @@
 document.body.insertAdjacentHTML('afterbegin', HOOK_HTML);
 document.body.insertAdjacentHTML('beforeend', END_HTML('Protect what you leave behind.'));
 
-const SC = {B: 2.6, C: 7.4, D: 14.4, E: 19.6, F: 26.4, G: 31.4, Z: 36.6}, END = 41.0;
+const SC = {B: 2.6, C: 7.4, D: 15.9, E: 21.1, F: 28.4, G: 33.4, Z: 38.6}, END = 43.0;
 
 function render(t) {
   renderHook(t, SC.B);
@@ -138,8 +140,9 @@ function render(t) {
   const e0 = SC.E + .45;
   blurIn($('E0'), t, e0);
   blurIn($('E1'), t, e0 + .25); blurIn($('E2'), t, e0 + .5); blurIn($('E3'), t, e0 + .75);
-  blurIn($('E4'), t, e0 + 1.6); blurIn($('E5'), t, e0 + 1.85); blurIn($('E6'), t, e0 + 2.6);
-  blurIn($('E7'), t, e0 + 3.3, .5, 24);
+  blurIn($('E4'), t, e0 + 1.6); blurIn($('E5'), t, e0 + 1.85); blurIn($('E6'), t, e0 + 2.9); blurIn($('E9'), t, e0 + 3.15);
+  blurIn($('E8'), t, e0 + 2.3, .5, 20);
+  blurIn($('E7'), t, e0 + 3.9, .5, 24);
   corner('E_corner', t, e0 + .1); rule($('E_rule'), t, e0 + 1.4);
 
   // F: get it wrong
